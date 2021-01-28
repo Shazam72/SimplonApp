@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../fonts/css/all.css" />
+    <link rel="stylesheet" href="../css/Modifier.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Modifier/Supprimer des infos-apprenant</title>
+  </head>
+  <body>
+    <input type="checkbox" id="myMenu" />
+    <div class="side-container d-flex align-items-center flex-column">
+      <header>
+        <label for="myMenu" id="myMenuCancel">
+          <i class="fas fa-times"></i>
+        </label>
+        <h3>Menu</h3>
+      </header>
+      <nav>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="./Ajouter.html">Ajouter un apprenant</a></li>
+        <li>
+          <a href="./Modifier.html">Modifier/Supprimer <br />un apprenant </a>
+        </li>
+        <li><a href="./DIASIM.php">Lister les apprenants</a></li>
+      </nav>
+    </div>
+    <div class="main-block">
+      <div class="voile"></div>
+      <header
+        class="container-fluid d-flex justify-content-center align-items-center"
+      >
+        <label for="myMenu" id="myMenuBtn"> <i class="fas fa-bars"></i> </label>
+        <h1 class="d-flex align-items-center flex-column">
+          SIMPLON BURKINA
+          <a href="#"><img src="../images/logo.png" alt="" /></a>
+        </h1>
+      </header>
+      <section class="row d-flex align-items-center innerMain mt-5">
+        <section class="d-flex flex-column select">
+            <form id="search">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="rechercher" id="rechercher" placeholder="Rechercher..." size="20" maxlength="10"/>
+                        </td>
+                        <td><i class="fas fa-search"></i></td>
+                    </tr>
+                </table>
+        </form>
+            <table class="result">
+                <tr>
+                    <th>NOM</th>
+                    <th>PRENOM</th>
+                </tr>
+                <tr>
+                    <td>fbsxc</td>
+                    <td>bhdn</td>
+                </tr>
+            </table>
+        </section>
+        <section class="col-xs-12 modifSection">
+          <h3>Modification</h3>
+          <form class="d-flex flex-column justify-content-center align-items-center ">
+            <table id="table">
+              <tr>
+                <td><label for="nom">Nom:</label></td>
+                <td><input type="text" name="nom" id="nom" /></td>
+              </tr>
+              <tr>
+                <td><label for="prenom">Prénom:</label></td>
+                <td><input type="text" name="prenom" id="prenom" /></td>
+              </tr>
+              <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td><input type="email" id="email" name="email" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="genre">Genre:</span>&nbsp;&nbsp;&nbsp;
+                  <input
+                    type="radio"
+                    id="male"
+                    name="genre"
+                    value="M"
+                    checked
+                  />&nbsp;<label for="genre"  class="noUnderline">M</label>&nbsp;&nbsp;&nbsp;
+                  <input type="radio" id="female" name="genre" value="F" />&nbsp;
+                  <label for="genre" class="noUnderline">F</label>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="ville">Ville d'origine:</label></td>
+                <td><input type="text" id="ville" name="ville" /></td>
+              </tr>
+              <tr>
+                <td><label for="formabase">Formation de base:</label></td>
+                <td><input type="text" id="formabase" name="formabase" /></td>
+              </tr>
+              <tr>
+                <td><label for="formasuiv">Formation suivie:</label></td>
+                <td><input type="text" id="formasuiv" name="formasuiv" /></td>
+              </tr>
+              <tr>
+                <td><label for="appr">Appréciation:</label></td>
+                <td>
+                  <textarea
+                    name="appr"
+                    id="appr"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </td>
+              </tr>
+            </table>
+            <div class="d-flex bouton">
+                <input type="submit" value="Modifier" id="modif"><input type="submit" value="Supprimer" id="supp">
+            </div>
+          </form>
+        </section>
+      </section>
+      <footer class="container-fluid d-flex justify-content-center align-items-center flex-column mt-5">
+        <h2><span>DIA</span><span>SIM</span></h2>
+       <a href="#"><img src="../images/simplon.png" alt=""></a> 
+    </footer>
+    </div>
+    <script src="../js/modif.js"></script>
+  </body>
+</html>

@@ -1,0 +1,321 @@
+/*
+@media screen and (min-width:300px) and (max-width:900px){
+  #simplon{
+    width: 58vw;
+    display: block;
+    margin: auto;
+  }
+  section section:first-child{
+    transform: translateX(0);
+  }
+  section table{
+    border-spacing:2rem 19px;
+  }
+}
+@media screen and (max-width:405px){
+  *{
+    font-size: 3vw;
+  }
+  
+  #simplon{
+    width: 58vw;
+    display: block;
+    margin: auto;
+  }
+  section section:first-child{
+    transform: translateX(0);
+  }
+  section table{
+    border-spacing:2rem 19px;
+  }
+  #myMenu:checked ~ .main-block header img{
+    opacity: 0;
+  }
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style:none;
+}
+a:hover{
+  text-decoration: none;
+}
+html,body{
+  font-size: 62.5%!important;
+}
+
+.alertUser{
+  width: 400px;
+  height: 100px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #f1f1f1;
+  position: fixed;
+  z-index: 100000;
+  left: 35%;
+  font-size: 2rem;
+  transform: translateY(-200px);
+  transition: transform ease-in 1s;
+  text-align: center;
+    color: #28a745;
+    font-weight: bolder;
+}
+.vsible{
+  transform: translateY(0);
+}
+.masqued{
+  display: none;
+}
+.alrt{
+  color: red;
+  font-size: smaller;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style:none;
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  overflow-x: hidden;
+  background-image: url(../images/background-simplon-pattern.svg);
+}
+header{
+  background:#ce0033;
+  width: 100%;
+  height: 12rem;
+  min-height: 9rem;
+  color: white;
+}
+h1{
+  font-weight: bolder;
+  font-family: 'Arial Black';
+  line-height: 6rem;
+  font-size: clamp(2rem,2.4rem,3.2rem);
+}
+header img{
+  max-width: 6rem;
+  min-width: 5.5rem;
+}
+h2{
+  margin-top: 1rem;
+  font-family: 'Segoe Script';
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.6rem,2.4rem,2.9rem);
+}
+h2 span{
+  font-family: 'Arial Black';
+}
+h2 span:last-of-type{
+  color: #ce0033;
+}
+h2 span:first-of-type{
+  color: #a000ef;
+}
+
+
+/* Le menu side */
+  #myMenu{
+    display: none;
+  }
+  #myMenuBtn,#myMenuCancel{
+    cursor: pointer;
+  }
+  #myMenuBtn{
+    position:absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2.6rem;
+    opacity: 1;
+    transition: transform ease-out 1s,opacity ease-out 1s;
+  }
+  .side-container header{
+    position: relative;
+    align-self: stretch;
+    background-color: rgba(255, 255, 255, 0.123);
+  
+  }
+  .side-container h3{
+    line-height: 12rem;
+    font-weight: bolder;
+    font-family: 'Arial Black';
+  }
+  .side-container #myMenuCancel{
+    position: absolute;
+    top:1rem;
+    right: 2rem;
+    font-size: 2.6rem;
+    color: #ce0033;
+    background-color: white;
+    display: block;
+    width: 3.5rem;
+    border-radius: 50%;
+  }
+  
+  .side-container{
+    font-size: 1.6rem;
+    transform: translateX(-500px);
+    z-index: 1000;
+    position: absolute;
+    width: 25rem;
+    color: white;
+    background-color:#ce0033;
+    text-align: center;
+    height: 100%;
+    transition: transform ease-out 1s;
+  }
+  
+  .side-container a{
+    padding: 2rem 1rem;
+    display: block;
+    color: white;
+    font-weight: bold;
+  }
+  .side-container a:hover{
+    background-color: white;
+    color: #ce0033;
+  }
+  
+  #myMenu ~ .main-block{
+    margin-left: 0;
+    transition: margin-left 1.1s;
+  }
+  #myMenu:checked ~ .main-block{
+    margin-left: 25rem;
+  }
+  #myMenu:checked ~ .main-block #myMenuBtn{
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  #myMenu:checked ~ .side-container{
+  transform: translateX(0);
+  }
+  #myMenu ~ .main-block .voile{
+    transform: scale(0);
+    position: absolute;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.123);
+    width: 1px;
+    height: 1px;
+    shape-outside: circle();
+    border-radius: 50%;
+    transition: transform ease-out 1s;
+  }
+  #myMenu:checked ~ .main-block .voile{
+    transform: scale(3000);
+  }
+
+
+  #myMenu:checked ~ .main-block header img{
+    opacity: 1;
+    transition: opacity ease-in-out .5s;
+  }
+
+  .innerMain{
+    justify-content:center;
+    font-size: 1.6rem;
+  }
+  section h3{
+    background-color: #ce0033;
+    line-height: 40px;
+    text-align: center;
+    width: 20em;
+    margin:auto;
+    margin-bottom: 0;
+    color: white;
+    font-family: 'Arial';
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  section section:first-child{
+    transform: translateX(-1em);
+  }
+  section table{
+    background-color: white;
+    border-top: 1rem solid #ce0033;
+    border-bottom: 1em solid #ce0033;
+    border-collapse: separate;
+    border-spacing:5em 1em;
+  }
+  section table label:not(.noUnderline),.genre{
+    font-family: 'Arial';
+    font-weight: bolder;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  input[type='text'],input[type='email']{
+    outline: none;
+    background-color: #e1e1e1b2;
+    padding-left: 2em;
+    border: none;
+    border-radius: 2em;
+    line-height: 2.3em;
+    width: 130%;
+  }
+  input[type='text']:focus,input[type='email']:focus{
+    border: 1px solid #9f00ef9c;
+  }
+textarea{
+    resize: none;
+    background-color: #e1e1e1b2;
+border: none;
+}
+textarea:focus{
+  border: 1px solid #9f00ef9c;
+  outline: none;
+}
+input[type='submit']{
+  color: white;
+  font-weight: bolder;
+  font-family: 'Verdana';
+  background: #ce0033;
+  padding:1em 3.3em ;
+  border: none;
+  outline: none;
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+  text-transform: uppercase;
+} 
+
+@media screen and (max-width:300px){
+  html,body{
+    font-size: 45%!important;
+  }
+  .alertUser{
+    width: 200px;
+    height: 50px;
+    left: 20%;
+    font-size: 2rem;
+    text-align: center;
+    color: #28a745;
+    font-weight: bolder;
+  }
+  #simplon{
+    width: 200px;
+  }
+  .formContainer{
+    width: 260px;
+  }
+  section table{
+    width: 100%;
+    border-spacing:0.5em 0.5em;
+  }
+  input[type='text'],input[type='email']{
+    width: 110%;
+  }
+  #myMenu:checked ~ .main-block header img{
+    opacity: 0;
+    transition: opacity ease-in .3s;
+  }
+}
+
+/*succes=>28a745
+danger=> */

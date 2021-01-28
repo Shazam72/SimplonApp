@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  body{
+    overflow-x: hidden;
+    background-image: url(../images/background-simplon-pattern.svg);
+  }
+  header{
+    background:#ce0033;
+    width: 100%;
+    height: 120px;
+    min-height: 90px;
+    color: white;
+  }
+  h1{
+    font-weight: bolder;
+    font-family: 'Arial Black';
+    line-height: 60px;
+    font-size: clamp(1.3rem,1.5rem,2rem);
+  }
+  header img{
+    max-width: 60px;
+    min-width: 55px;
+  }
+  h2{
+    margin-top: 15px;
+    font-family: 'Segoe Script';
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(1rem,1.5rem,1.8rem);
+  }
+  h2 span{
+    font-family: 'Arial Black';
+  }
+  h2 span:last-of-type{
+    color: #ce0033;
+  }
+  h2 span:first-of-type{
+    color: #a000ef;
+  }
+    
+    /* Le menu side */
+    #myMenu{
+      display: none;
+    }
+    #myMenuBtn,#myMenuCancel{
+      cursor: pointer;
+    }
+    #myMenuBtn{
+      position:absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 26px;
+      opacity: 1;
+      transition: transform ease-out 1s,opacity ease-out 1s;
+    }
+    .side-container header{
+      position: relative;
+      align-self: stretch;
+      background-color: rgba(255, 255, 255, 0.123);
+    
+    }
+    .side-container h3{
+      line-height: 120px;
+      font-weight: bolder;
+      font-family: 'Arial Black';
+    }
+    .side-container #myMenuCancel{
+      position: absolute;
+      top:10px;
+      right: 20px;
+      font-size: 26px;
+      color: #ce0033;
+      background-color: white;
+      display: block;
+      width: 35px;
+      border-radius: 50%;
+    }
+    
+    .side-container{
+      transform: translateX(-500px);
+      z-index: 1000;
+      position: absolute;
+      width: 250px;
+      color: white;
+      background-color:#ce0033;
+      text-align: center;
+      height: 100%;
+      transition: transform ease-out 1s;
+    }
+    
+    .side-container a{
+      padding: 20px 10px;
+      display: block;
+      color: white;
+      font-weight: bold;
+    }
+    .side-container a:hover{
+      background-color: white;
+      color: #ce0033;
+    }
+    
+    #myMenu ~ .main-block{
+      margin-left: 0;
+      transition: margin-left 1.1s;
+    }
+    #myMenu:checked ~ .main-block{
+      margin-left: 250px;
+    }
+    #myMenu:checked ~ .main-block #myMenuBtn{
+      opacity: 0;
+      transform: translateX(150px);
+    }
+    #myMenu:checked ~ .side-container{
+    transform: translateX(0);
+    }
+    #myMenu ~ .main-block .voile{
+      transform: scale(0);
+      position: absolute;
+      z-index: 9;
+      background-color: rgba(0, 0, 0, 0.123);
+      width: 1px;
+      height: 1px;
+      shape-outside: circle();
+      border-radius: 50%;
+      transition: transform ease-out 1s;
+    }
+    #myMenu:checked ~ .main-block .voile{
+      transform: scale(3000);
+    }
+  
+  
+    #myMenu:checked ~ .main-block header img{
+      opacity: 1;
+      transition: opacity ease-in-out .5s;
+    }
+
+
+
+
+    .innerMain{
+      justify-content:center;
+    }
+    section h3{
+      background-color: #ce0033;
+      line-height: 60px;
+      text-align: center;
+      width: 350px;
+      margin:auto;
+      margin-bottom: 0;
+      color: white;
+      font-family: 'Arial';
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+
+
+
+    #search{
+        margin-left:50px ;
+        margin-bottom: 40px;
+    }
+    #search table td {
+      border: none;
+      width: 200px;
+    }
+    #search table input {
+      width: 150%;
+      outline: none;
+      border: 2px solid rgb(219, 215, 215);
+      line-height: 40px;
+      border-radius: 20px;
+      padding-left: 20px;
+    }
+
+.select{
+    align-items: flex-start;
+    align-self: start;
+}
+.select .result,.modifSection{
+    display: none;
+}
+.select .result td,
+.select .result th {
+  padding:0 10px;
+  border: 1px solid rgb(219, 215, 215);
+}
+.select .result th {
+  color: #ce0033;
+  line-height: 60px;
+  font-weight: bolder;
+  font-family: 'Arial Black';
+}
+.select .result td {
+  font-weight: bold;
+  padding-bottom: 3%;
+}
+.select .result table tr td:not(:nth-child(3)):not(:last-child){
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+
+
+    section #table{
+      background-color: white;
+      border-top: 10px solid #ce0033;
+      border-bottom: 10px solid #ce0033;
+      border-collapse: separate;
+      border-spacing:50px 19px;
+    }
+    section #table label:not(.noUnderline),.genre{
+      font-family: 'Arial';
+      font-weight: bolder;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    input[type='text'],input[type='email']{
+      outline: none;
+      background-color: #e1e1e1b2;
+      padding-left: 20px;
+      border: none;
+      border-radius: 20px;
+      line-height: 35px;
+      width: 110%;
+    }input[type='text']:focus,input[type='email']:focus{
+      border: 1px solid #9f00ef9c;
+    }
+  textarea{
+      resize: none;
+      background-color: #e1e1e1b2;
+  border: none;
+  }
+  textarea:focus{
+    border: 1px solid #9f00ef9c;
+    outline: none;
+  }
+  #modif{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Verdana';
+    background: #0059fffd;
+    padding:10px 30px ;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-transform: uppercase;
+  }
+  .bouton{
+      justify-content: space-around;
+  }
+  #supp{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Verdana';
+    background: crimson;
+    padding:10px 30px ;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-transform: uppercase;
+  }
+  @media screen and (min-width:300px) and (max-width:900px){
+    #simplon{
+      width: 58vw;
+      display: block;
+      margin: auto;
+    }
+    section section:first-child{
+      transform: translateX(0);
+    }
+    section #table{
+      border-spacing:20px 19px;
+    }
+  }
+  @media screen and (max-width:405px){
+    *{
+      font-size: 3vw;
+    }
+    #simplon{
+      width: 58vw;
+      display: block;
+      margin: auto;
+    }
+    section section:first-child{
+      transform: translateX(0);
+    }
+    section #table{
+      border-spacing:20px 19px;
+    }
+    #myMenu:checked ~ .main-block header img{
+      opacity: 0;
+    }
+  }
+  

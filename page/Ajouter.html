@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../fonts/css/all.css" />
+    <link rel="stylesheet" href="../css/Ajouter.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>DIASIM - Liste des apprenants</title>
+  </head>
+  <body>
+    <div class="d-flex justify-content-center align-items-center pr-3 pl-3 alertUser"></div>
+    <input type="checkbox" id="myMenu" />
+    <div class="side-container d-flex align-items-center flex-column">
+      <header>
+        <label for="myMenu" id="myMenuCancel">
+          <i class="fas fa-times"></i>
+        </label>
+        <h3>Menu</h3>
+      </header>
+      <nav>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="./Ajouter.html">Ajouter un apprenant</a></li>
+        <li>
+          <a href="./Modifier.html">Modifier/Supprimer <br />un apprenant </a>
+        </li>
+        <li><a href="./DIASIM.php">Lister les apprenants</a></li>
+      </nav>
+    </div>
+    <div class="main-block">
+      <div class="voile"></div>
+      <header
+        class="container-fluid d-flex justify-content-center align-items-center"
+      >
+        <label for="myMenu" id="myMenuBtn"> <i class="fas fa-bars"></i> </label>
+        <h1 class="d-flex align-items-center flex-column">
+          SIMPLON BURKINA
+          <a href="#"><img src="../images/logo.png" alt="" /></a>
+        </h1>
+      </header>
+      <section class="row d-flex align-items-center innerMain mt-5">
+        <section class="d-flex flex-column justify-content-center align-items-center">
+          <img src="../images/sol-logo.png" alt="" id="simplon">
+          <h2><span>DIA</span><span>SIM</span></h2>
+        </section>
+        <section class="formContainer">
+          <h3>Inscription</h3>
+          <form class="d-flex flex-column justify-content-center align-items-center myForm">
+            <table>
+              <tr>
+                <td><label for="nom">Nom:</label></td>
+                <td><input type="text" name="nom" id="nom" class="lgInput" />
+                <p class="alrt"></p></td>
+              </tr>
+              <tr>
+                <td><label for="prenom">Prénom:</label></td>
+                <td><input type="text" name="prenom" id="prenom" class="lgInput" />
+                <p class="alrt"></p></td>
+              </tr>
+              <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td><input type="email" id="email" name="email" class="lgInput" />
+                <p class="alrt"></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <span class="genre">Genre:</span>&nbsp;&nbsp;&nbsp;
+                  <input
+                    type="radio"
+                    id="male"
+                    name="genre"
+                    value="M"
+                    checked
+                  />&nbsp;<label for="genre"  class="noUnderline">M</label>&nbsp;&nbsp;&nbsp;
+                  <input type="radio" id="female" name="genre" value="F" />&nbsp;
+                  <label for="genre" class="noUnderline">F</label>
+                  </p>
+                  <p class="alrt"></p>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="ville">Ville d'origine:</label></td>
+                <td><input type="text" id="ville" name="ville" class="lgInput" /><p class="alrt masqued">Seuls les lettres, les caractères accentués et les chiffres sont autorisés</p></td>
+              </tr>
+              <tr>
+                <td><label for="formabase">Formation de base:</label></td>
+                <td><input type="text" id="formabase" name="formabase" class="lgInput" /><p class="alrt masqued">Seuls les lettres, les caractères accentués et les chiffres sont autorisés</p></td>
+              </tr>
+              <tr>
+                <td><label for="formasuiv">Formation suivie:</label></td>
+                <td><input type="text" id="formasuiv" name="formasuiv" class="lgInput" />
+                <p class="alrt"></p></td>
+              </tr>
+              <tr>
+                <td><label for="appr">Appréciation:</label></td>
+                <td>
+                  <textarea
+                    name="appr"
+                    id="appr"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+               </td>
+              </tr>
+            </table>
+            <input type="submit" value="Ajouter">
+          </form>
+        </section>
+      </section>
+      <footer class="container-fluid d-flex justify-content-center align-items-center flex-column mt-5">
+        <h2><span>DIA</span><span>SIM</span></h2>
+       <a href="#"><img src="../images/simplon.png" alt=""></a> 
+    </footer>
+    </div>
+    <script src="../js/verif.js"></script>
+  </body>
+</html>

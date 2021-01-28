@@ -1,0 +1,96 @@
+header,.top-header,footer{
+    background: #6d071a;
+}
+a:hover{
+	text-decoration: none;
+}
+/*Header*/
+.top-header{
+	min-height: 90px;
+	max-height:90px;
+	justify-content: space-between;
+	width: 100%;
+}
+.top-header a{
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	color:white;
+	font-weight: bolder;
+	font-size: 1.5vw;
+}
+.top-header a .fa-clock,.top-header a .fa-phone-alt{
+	font-size: 3.8vw;
+}
+.search-bar{
+	background: #7a1e2f;
+	padding: 10px;
+}
+.search-bar table{
+	width: 30%;
+}
+.search-bar input{
+	padding-left: 15px;
+	outline: none;
+	border-radius: 20px;
+	width: 110%;
+}
+.search-bar input::placeholder{
+	font-style: italic;
+	color: #7a1e2f;
+}
+.search-bar button{
+	border: none;
+	background: transparent;
+	outline: none;
+	color: #7a1e2f;
+}
+.search-bar table .fa-search{
+	color: #7a1e2f;
+	font-size: 20px;
+}
+.num_vert{
+	padding: 0 20px;
+}
+/*fin Header*/
+
+
+/*footer*/
+footer li{
+    list-style-type: none;
+}
+footer{
+    margin-top: 100px;
+}
+footer iframe{
+	margin-top: 20px;
+	width: 100%!important;
+	height: 400px!important;
+}
+footer .element{
+	color: white;
+}
+footer .element a{
+	color: white;
+}
+.element:not(:nth-child(4)) ul{
+	margin-left: 100px;
+}
+.element:nth-child(4) a{
+	font-size: 2rem;
+}
+.element:nth-child(4) ul li{
+	height: 50px!important;
+	width: 38px!important;
+	text-align: center;
+}
+.element:nth-child(4) ul:last-of-type{
+	margin-top: -25px;
+}
+footer .element:not(:nth-child(1)){
+	margin-top: 100px;
+}
+.copyright{
+	color: rgba(255, 255, 255, 0.445);
+}
+/*fin footer*/
