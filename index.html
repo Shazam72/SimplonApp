@@ -8,8 +8,6 @@
     <title>Connexion - DIASIM</title>
   </head>
   <body>
-    <div class="alert cached">
-    </div>
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
@@ -18,12 +16,12 @@
             <h2 class="title">Se connecter</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="id_userIn" class="aVider" placeholder="Nom d'utilisateur" />
+              <input type="text" name="username" class="aVider" placeholder="Nom d'utilisateur" />
               <p class="obligated"></p>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" name="id_mdpIn" class="aVider" placeholder="Mot de passe" />
+              <input type="password" name="mdp" class="aVider" placeholder="Mot de passe" />
               <p class="obligated"></p>
             </div>
             <input type="submit" value="Se connecter" class="btn solid" />
@@ -32,19 +30,24 @@
           <form action="#" class="sign-up-form">
             <h2 class="title">S'inscrire</h2>
             <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" name="id_userUp" placeholder="Nom d'utilisateur" class="aVider" />
-              <p class="obligated"></p>
-            </div>
-            <div class="input-field">
               <i class="fas fa-envelope"></i>
               <input type="email" name="email" placeholder="E-mail" class="aVider" />
               <p class="obligated"></p>
             </div>
             <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" name="id_mdpUp" placeholder="Mot de passe" class="aVider" />
+              <i class="fas fa-user"></i>
+              <input type="text" name="username" placeholder="Nom d'utilisateur" class="aVider" />
               <p class="obligated"></p>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="mdp" placeholder="Mot de passe" class="aVider" />
+              <p class="obligated"></p>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="mdp_confirm" placeholder="Confirmer votre mot de passe" class="aVider" />
+              <p class="mdp_confirm"></p>
             </div>
             <input type="submit" class="btn" value="S'inscrire" />
           </form>
@@ -79,7 +82,7 @@
         </div>
       </div>
     </div>
-
+    <script src="js/sweetalert.min.js"></script>
     <script src="./js/loginup.js"></script>
   </body>
 </html>
